@@ -1,0 +1,26 @@
+.loading-screen-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #efefef;
+    z-index: 9999999999;
+}
+
+.loading-screen-logo {
+    width: 500px;
+}
+
+@media all and (max-width:800px){
+	.loading-screen-logo {
+	    width: 250px;
+	}
+}
+
+@media all and (max-width:600px){
+	.loading-screen-logo {
+	    width: 200px;
+	}
+}
+

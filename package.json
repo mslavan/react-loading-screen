@@ -1,0 +1,49 @@
+{
+  "name": "react-tagsinput",
+  "version": "3.19.0",
+  "description": "Highly customizable React component for inputing tags",
+  "main": "react-tagsinput.js",
+  "peerDependencies": {
+    "react": "^16.0.0 || ^15.0.0 || ^0.14.0"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "^6.3.13",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "standard": "^8.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olahol/react-tagsinput"
+  },
+  "keywords": [
+    "react",
+    "loading-screen"
+  ],
+  "author": "Slava Mikhailenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olahol/react-tagsinput/issues"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "homepage": "https://github.com/olahol/react-tagsinput"
+}
