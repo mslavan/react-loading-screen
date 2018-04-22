@@ -3,7 +3,7 @@
 A React loading screen. Сan be used as a screen saver for the initial download of the application or as an overload screen for promises.
 
 # DEMO
-![demo.gif](https://preview.ibb.co/nqTTyc/demo.gif)
+![demo.gif](https://i.yapx.ru/BQgeX.gif)
 ## Installation
 
 ```
