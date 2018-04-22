@@ -23,11 +23,9 @@ function ChildrenWrapper(_ref) {
   var loading = _ref.loading,
       children = _ref.children;
 
+
   var style = {
-    display: loading ? "none" : "block",
-    position: "absolute",
-    top: 0,
-    left: 0
+    display: loading ? "none" : "block"
   };
 
   return _react2.default.createElement(

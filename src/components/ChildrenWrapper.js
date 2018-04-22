@@ -10,11 +10,9 @@ function ChildrenWrapper ({
  loading,
  children
 }) {
+  
   const style = {
 	  display: loading ? "none" : "block",
-  	position: "absolute",
-  	top: 0,
-  	left: 0
   }
 
   return (
