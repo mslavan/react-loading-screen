@@ -15,9 +15,9 @@ class Demo extends React.Component {
   componentDidMount () {
     // fake promise
     
-    //setTimeout(() =>
-    //  this.setState({ loading: false })
-    //, 3000)
+    setTimeout(() =>
+      this.setState({ loading: false })
+    , 5000)
   }
 
   render () {

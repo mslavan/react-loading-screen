@@ -39,31 +39,34 @@ function LoadingScreen ({
   }
 
   return (
-    <div style={windowSizeBlock}>
-      <Root 
-        backgroundColor={backgroundColor} 
-        loading={loading}
-      >
-        <ContainerLogo loading={loading}>
-          {logoSrc && 
-            <Logo 
-              src={logoSrc}
-              rounded={logoRounded}/>}
-          
-          {loading &&
-            <Spinner 
-              name="ball-beat" 
-              fadeIn="quarter" 
-              color={spinnerColor}/>}
-          
-          {text && 
-            <Text 
-              text={text} 
-              textColor={textColor}/>}
-          
-        </ContainerLogo>
+    <div>
+      <div style={windowSizeBlock}>
+        <Root 
+          backgroundColor={backgroundColor} 
+          loading={loading}
+        >
+          <ContainerLogo loading={loading}>
+            {logoSrc && 
+              <Logo 
+                src={logoSrc}
+                rounded={logoRounded}/>}
+            
+            {loading &&
+              <Spinner 
+                name="ball-beat" 
+                fadeIn="quarter" 
+                color={spinnerColor}/>}
+            
+            {text && 
+              <Text 
+                text={text} 
+                textColor={textColor}/>}
+            
+          </ContainerLogo>
 
-      </Root>
+        </Root>
+      </div>
+
       <ChildrenWrapper loading={loading}>
         {children}
       </ChildrenWrapper>    

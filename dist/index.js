@@ -70,26 +70,30 @@ function LoadingScreen(_ref) {
 
   return _react2.default.createElement(
     'div',
-    { style: windowSizeBlock },
+    null,
     _react2.default.createElement(
-      _Root2.default,
-      {
-        backgroundColor: backgroundColor,
-        loading: loading
-      },
+      'div',
+      { style: windowSizeBlock },
       _react2.default.createElement(
-        _ContainerLogo2.default,
-        { loading: loading },
-        logoSrc && _react2.default.createElement(_Logo2.default, {
-          src: logoSrc,
-          rounded: logoRounded }),
-        loading && _react2.default.createElement(_reactSpinkit2.default, {
-          name: 'ball-beat',
-          fadeIn: 'quarter',
-          color: spinnerColor }),
-        text && _react2.default.createElement(_Text2.default, {
-          text: text,
-          textColor: textColor })
+        _Root2.default,
+        {
+          backgroundColor: backgroundColor,
+          loading: loading
+        },
+        _react2.default.createElement(
+          _ContainerLogo2.default,
+          { loading: loading },
+          logoSrc && _react2.default.createElement(_Logo2.default, {
+            src: logoSrc,
+            rounded: logoRounded }),
+          loading && _react2.default.createElement(_reactSpinkit2.default, {
+            name: 'ball-beat',
+            fadeIn: 'quarter',
+            color: spinnerColor }),
+          text && _react2.default.createElement(_Text2.default, {
+            text: text,
+            textColor: textColor })
+        )
       )
     ),
     _react2.default.createElement(
