@@ -28,8 +28,7 @@ function ContainerLogo(_ref) {
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '500px'
+    transform: 'translate(-50%, -50%)'
   };
 
   return _react2.default.createElement(

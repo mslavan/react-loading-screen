@@ -42,18 +42,20 @@ var propTypes = {
   children: _propTypes2.default.node.isRequired,
   backgroundColor: _propTypes2.default.string,
   spinnerColor: _propTypes2.default.string,
+  textColor: _propTypes2.default.string,
   loading: _propTypes2.default.bool.isRequired,
   logoSrc: _propTypes2.default.string,
-  text: _propTypes2.default.string,
-  textStyle: _propTypes2.default.object
+  text: _propTypes2.default.string
 };
 
 function LoadingScreen(_ref) {
   var children = _ref.children,
       backgroundColor = _ref.backgroundColor,
       spinnerColor = _ref.spinnerColor,
+      textColor = _ref.textColor,
       loading = _ref.loading,
       logoSrc = _ref.logoSrc,
+      logoRounded = _ref.logoRounded,
       text = _ref.text,
       textStyle = _ref.textStyle;
 
@@ -79,11 +81,15 @@ function LoadingScreen(_ref) {
         _ContainerLogo2.default,
         { loading: loading },
         logoSrc && _react2.default.createElement(_Logo2.default, {
-          src: logoSrc }),
-        loading && _react2.default.createElement(_reactSpinkit2.default, { name: 'ball-pulse-sync', color: spinnerColor }),
+          src: logoSrc,
+          rounded: logoRounded }),
+        loading && _react2.default.createElement(_reactSpinkit2.default, {
+          name: 'ball-beat',
+          fadeIn: 'quarter',
+          color: spinnerColor }),
         text && _react2.default.createElement(_Text2.default, {
           text: text,
-          textStyle: textStyle })
+          textColor: textColor })
       )
     ),
     _react2.default.createElement(

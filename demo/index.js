@@ -15,9 +15,9 @@ class Demo extends React.Component {
   componentDidMount () {
     // fake promise
     
-    setTimeout(() =>
-      this.setState({ loading: false })
-    , 3000)
+    //setTimeout(() =>
+    //  this.setState({ loading: false })
+    //, 3000)
   }
 
   render () {
@@ -26,14 +26,12 @@ class Demo extends React.Component {
     return (
       <LoadingScreen 
       	loading={loading}
-      	backgroundColor='gray'
-        spinnerColor='white'
-        logoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-        text="Facebook - founders of React"
-        textStyle={{ 
-          color: 'white',
-          fontSize: '32px',
-        }}
+      	backgroundColor='#fff'
+        spinnerColor='#ffa53a'
+        textColor='#057bb2'
+        logoSrc="https://lh3.googleusercontent.com/-zFVbSA6crcI/AAAAAAAAAAI/AAAAAAAAAA4/bwVOMmXMH3I/s640/photo.jpg"
+        logoRounded={true}
+        text="Book sanatoriums online "
       >
         <h1>Demo app</h1>
         <p>Example of usage loading-screen , based on React</p>

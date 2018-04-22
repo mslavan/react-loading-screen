@@ -12,18 +12,20 @@ const propTypes = {
   children:        PropTypes.node.isRequired,
   backgroundColor: PropTypes.string,
   spinnerColor:    PropTypes.string,
+  textColor:       PropTypes.string,
   loading:         PropTypes.bool.isRequired,
   logoSrc:         PropTypes.string,
   text:            PropTypes.string,
-  textStyle:       PropTypes.object,
 }
 
 function LoadingScreen ({
   children,
   backgroundColor,
   spinnerColor,
+  textColor,  
   loading,
   logoSrc,
+  logoRounded,
   text,
   textStyle
 }) {
@@ -45,15 +47,19 @@ function LoadingScreen ({
         <ContainerLogo loading={loading}>
           {logoSrc && 
             <Logo 
-              src={logoSrc}/>}
+              src={logoSrc}
+              rounded={logoRounded}/>}
           
           {loading &&
-            <Spinner name="ball-pulse-sync" color={spinnerColor}/>}
+            <Spinner 
+              name="ball-beat" 
+              fadeIn="quarter" 
+              color={spinnerColor}/>}
           
           {text && 
             <Text 
               text={text} 
-              textStyle={textStyle}/>}
+              textColor={textColor}/>}
           
         </ContainerLogo>
 
