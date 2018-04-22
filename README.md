@@ -65,10 +65,15 @@ Root component, it includes three subcomponents, you can control them through pr
 
 some of props are **REQUIRED**, if not mentioned prop is OPTIONAL.
 
-**loading** { bool }: the content of the page is loaded or not (**required parameter**)
-**bgColor** { string }: background color of loading sreen. deault `#ffffff` 
+**loading** { bool }: the content of the page is loaded or not (**required parameter**).
+
+**bgColor** { string }: background color of loading sreen. deault `#ffffff` .
+
 **spinnerColor** { string }: spinner color. If empty param - not showing. 
+
 **textColor** { string }: text under spinner. default `#676767`. 
+
 **logoSrc** { string }: url of image. If empty param  - not showing. 
+
 **text** { string }: background color of loading sreen. If empty param  - not showing. 
 
