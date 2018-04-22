@@ -1,6 +1,6 @@
 {
   "name": "react-loading-screen",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Loading screen example for react",
   "main": "dist/index.js",
   "scripts": {
