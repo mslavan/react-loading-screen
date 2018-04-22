@@ -35,7 +35,7 @@ class Demo extends React.Component {
           <h1>react-screen-loading</h1>
           <p>Example of usage loading-screen, based on React</p>
           <img src='https://cdn-images-1.medium.com/max/1050/1*i3hzpSEiEEMTuWIYviYweQ.png' style={{ maxWidth: '100%' }} />
-          <h2>Github repository: <a href='https://github.com/mslavan/loading-screen' target='_blank'>https://github.com/mslavan/loading-screen</a></h2>
+          <h2>Github repository: <a href='https://github.com/mslavan/loading-screen' target='_blank'>https://github.com/mslavan/react-loading-screen</a></h2>
           <h2>Find me in linkedIn: <a href='https://www.linkedin.com/in/slava-mikhailenko-71295a144' target='_blank'>https://www.linkedin.com/in/slava-mikhailenko-71295a144</a></h2>
         </div>
       </LoadingScreen>
