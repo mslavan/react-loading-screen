@@ -31,7 +31,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Title = _styledComponents2.default.p(_templateObject, function (props) {
-  return props.color ? props.color : 'gray';
+  return props.color ? props.color : '#676767';
 }, _mediaConf2.default.largest(_templateObject2), _mediaConf2.default.desktop(_templateObject3), _mediaConf2.default.tablet(_templateObject4), _mediaConf2.default.phone(_templateObject5));
 
 var propTypes = {

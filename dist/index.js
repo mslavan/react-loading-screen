@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n'], ['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n'], ['\n  display: ', ';\n']);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -16,17 +20,9 @@ var _reactSpinkit = require('react-spinkit');
 
 var _reactSpinkit2 = _interopRequireDefault(_reactSpinkit);
 
-var _Root = require('./components/Root');
+var _styledComponents = require('styled-components');
 
-var _Root2 = _interopRequireDefault(_Root);
-
-var _ContainerLogo = require('./components/ContainerLogo');
-
-var _ContainerLogo2 = _interopRequireDefault(_ContainerLogo);
-
-var _ChildrenWrapper = require('./components/ChildrenWrapper');
-
-var _ChildrenWrapper2 = _interopRequireDefault(_ChildrenWrapper);
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _Logo = require('./components/Logo');
 
@@ -38,9 +34,23 @@ var _Text2 = _interopRequireDefault(_Text);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ScreenWrapper = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.bgColor || '#ffffff';
+}, function (props) {
+  return props.loading ? 1 : 0;
+}, function (props) {
+  return props.loading ? 'visible' : 'hidden';
+});
+var LoadingComponents = _styledComponents2.default.div(_templateObject2);
+var LoadableData = _styledComponents2.default.div(_templateObject3, function (props) {
+  return props.loading ? 'none' : 'block';
+});
+
 var propTypes = {
   children: _propTypes2.default.node.isRequired,
-  backgroundColor: _propTypes2.default.string,
+  bgColor: _propTypes2.default.string,
   spinnerColor: _propTypes2.default.string,
   textColor: _propTypes2.default.string,
   loading: _propTypes2.default.bool.isRequired,
@@ -50,7 +60,7 @@ var propTypes = {
 
 function LoadingScreen(_ref) {
   var children = _ref.children,
-      backgroundColor = _ref.backgroundColor,
+      bgColor = _ref.bgColor,
       spinnerColor = _ref.spinnerColor,
       textColor = _ref.textColor,
       loading = _ref.loading,
@@ -59,45 +69,32 @@ function LoadingScreen(_ref) {
       text = _ref.text,
       textStyle = _ref.textStyle;
 
-
-  var windowSizeBlock = {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '100%',
-    height: '100%'
-  };
-
   return _react2.default.createElement(
     'div',
     null,
     _react2.default.createElement(
-      'div',
-      { style: windowSizeBlock },
+      ScreenWrapper,
+      {
+        bgColor: bgColor,
+        loading: loading
+      },
       _react2.default.createElement(
-        _Root2.default,
-        {
-          backgroundColor: backgroundColor,
-          loading: loading
-        },
-        _react2.default.createElement(
-          _ContainerLogo2.default,
-          { loading: loading },
-          logoSrc && _react2.default.createElement(_Logo2.default, {
-            src: logoSrc,
-            rounded: logoRounded }),
-          loading && _react2.default.createElement(_reactSpinkit2.default, {
-            name: 'ball-beat',
-            fadeIn: 'quarter',
-            color: spinnerColor }),
-          text && _react2.default.createElement(_Text2.default, {
-            text: text,
-            textColor: textColor })
-        )
+        LoadingComponents,
+        null,
+        logoSrc && _react2.default.createElement(_Logo2.default, {
+          src: logoSrc,
+          rounded: logoRounded }),
+        loading && spinnerColor && _react2.default.createElement(_reactSpinkit2.default, {
+          name: 'ball-beat',
+          fadeIn: 'quarter',
+          color: spinnerColor }),
+        text && _react2.default.createElement(_Text2.default, {
+          text: text,
+          textColor: textColor })
       )
     ),
     _react2.default.createElement(
-      _ChildrenWrapper2.default,
+      LoadableData,
       { loading: loading },
       children
     )

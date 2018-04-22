@@ -3,11 +3,11 @@ var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var { Server } 			 = require('http');
 var express 			 = require('express')
-var path 				 = require('path');
+var path 				 = require('path')
 
 const port   = process.env.PORT || 3000;
-const app 	 = express();
-const server = Server(app);
+const app 	 = express()
+const server = Server(app)
 
 var webpackConfig  = require('../webpack-demo.config.js');
 var compiler 	   = webpack(webpackConfig);

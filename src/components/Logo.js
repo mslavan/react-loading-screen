@@ -9,23 +9,23 @@ const Image = styled.img`
   border-radius: ${props => props.rounded ? '10%' : '0px'};
 
   ${media.largest`
-  	width: 150px;
-  	max-height: 175px;
+    width: 150px;
+    max-height: 175px;
   `}
 
   ${media.desktop`
-  	width: 120px;
-  	max-height: 135px;
+    width: 120px;
+    max-height: 135px;
   `}
 
   ${media.tablet`
-  	width: 100px;
-  	max-height: 115px;
+    width: 100px;
+    max-height: 115px;
   `}
 
   ${media.phone`
-  	width: 80px;
-  	max-height: 90px;
+    width: 80px;
+    max-height: 90px;
   `}
 `
 
@@ -36,9 +36,8 @@ const propTypes = {
 
 function Logo ({
  src,
- rounded,
+ rounded
 }) {
-  
   return (
     <Image
       rounded

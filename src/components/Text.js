@@ -7,7 +7,7 @@ import media from '../media.conf.js'
 const Title = styled.p`
   text-align: 'center';
   word-wrap: break-word;
-  color: ${props => props.color ? props.color : 'gray'}
+  color: ${props => props.color ? props.color : '#676767'}
 
   ${media.largest`
     font-size: 30px;

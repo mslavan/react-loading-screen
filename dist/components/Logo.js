@@ -5,10 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  margin-bottom: 20px;\n  border-radius: ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n'], ['\n  margin-bottom: 20px;\n  border-radius: ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  \twidth: 150px;\n  \tmax-height: 175px;\n  '], ['\n  \twidth: 150px;\n  \tmax-height: 175px;\n  ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  \twidth: 120px;\n  \tmax-height: 135px;\n  '], ['\n  \twidth: 120px;\n  \tmax-height: 135px;\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  \twidth: 100px;\n  \tmax-height: 115px;\n  '], ['\n  \twidth: 100px;\n  \tmax-height: 115px;\n  ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  \twidth: 80px;\n  \tmax-height: 90px;\n  '], ['\n  \twidth: 80px;\n  \tmax-height: 90px;\n  ']);
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: 150px;\n    max-height: 175px;\n  '], ['\n    width: 150px;\n    max-height: 175px;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    width: 120px;\n    max-height: 135px;\n  '], ['\n    width: 120px;\n    max-height: 135px;\n  ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    width: 100px;\n    max-height: 115px;\n  '], ['\n    width: 100px;\n    max-height: 115px;\n  ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n    width: 80px;\n    max-height: 90px;\n  '], ['\n    width: 80px;\n    max-height: 90px;\n  ']);
 
 var _react = require('react');
 
@@ -42,7 +42,6 @@ var propTypes = {
 function Logo(_ref) {
   var src = _ref.src,
       rounded = _ref.rounded;
-
 
   return _react2.default.createElement(Image, {
     rounded: true,

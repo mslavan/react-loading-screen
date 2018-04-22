@@ -17,4 +17,4 @@ const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-export default media;
+export default media

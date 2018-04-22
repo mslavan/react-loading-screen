@@ -14,27 +14,30 @@ class Demo extends React.Component {
 
   componentDidMount () {
     // fake promise
-    
     setTimeout(() =>
       this.setState({ loading: false })
-    , 5000)
+    , 1500)
   }
 
   render () {
     const { loading } = this.state
 
     return (
-      <LoadingScreen 
-      	loading={loading}
-      	backgroundColor='#fff'
-        spinnerColor='#ffa53a'
-        textColor='#057bb2'
-        logoSrc="https://lh3.googleusercontent.com/-zFVbSA6crcI/AAAAAAAAAAI/AAAAAAAAAA4/bwVOMmXMH3I/s640/photo.jpg"
-        logoRounded={true}
-        text="Book sanatoriums online "
+      <LoadingScreen
+        loading={loading}
+        bgColor='#f1f1f1'
+        spinnerColor='#9ee5f8'
+        textColor='#676767'
+        logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png'
+        text='Here an introduction sentence (Optional)'
       >
-        <h1>Demo app</h1>
-        <p>Example of usage loading-screen , based on React</p>
+        <div style={{ textAlign: 'center' }}>
+          <h1>react-screen-loading</h1>
+          <p>Example of usage loading-screen, based on React</p>
+          <img src='https://cdn-images-1.medium.com/max/1050/1*i3hzpSEiEEMTuWIYviYweQ.png' style={{ maxWidth: '100%' }} />
+          <h2>Github repository: <a href='https://github.com/mslavan/loading-screen' target='_blank'>https://github.com/mslavan/loading-screen</a></h2>
+          <h2>Find me in linkedIn: <a href='https://www.linkedin.com/in/slava-mikhailenko-71295a144' target='_blank'>https://www.linkedin.com/in/slava-mikhailenko-71295a144</a></h2>
+        </div>
       </LoadingScreen>
     )
   }
