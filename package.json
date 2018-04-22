@@ -1,37 +1,15 @@
 {
-  "name": "react-tagsinput",
-  "version": "3.19.0",
-  "description": "Highly customizable React component for inputing tags",
-  "main": "react-tagsinput.js",
-  "peerDependencies": {
-    "react": "^16.0.0 || ^15.0.0 || ^0.14.0"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "webpack": "^2.6.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-stage-0": "^6.3.13",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "standard": "^8.6.0"
-  },
+  "name": "react-loading-screen",
+  "version": "0.0.1",
+  "description": "Loading screen example for react",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "node ./demo/server.js",
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/olahol/react-tagsinput"
+    "url": "https://github.com/mslavan/loading-screen"
   },
   "keywords": [
     "react",
@@ -39,11 +17,33 @@
   ],
   "author": "Slava Mikhailenko",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olahol/react-tagsinput/issues"
+  "homepage": "https://github.com/mslavan/loading-screen",
+  "peerDependencies": {
+    "react": "^16.0.0 || ^15.0.0 || ^0.14.0"
   },
-  "standard": {
-    "parser": "babel-eslint"
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.6.2",
+    "react-spinkit": "^3.0.0",
+    "webpack": "^2.6.1"
   },
-  "homepage": "https://github.com/olahol/react-tagsinput"
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-loader": "6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "express": "^4.13.4",
+    "http-server": "^0.10.0",
+    "prop-types": "^15.6.0",
+    "react-hot-loader": "1.3.1",
+    "standard": "^8.6.0",
+    "style-loader": "^0.18.2",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-hot-middleware": "^2.21.0"
+  }
 }

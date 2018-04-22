@@ -1,31 +1,70 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Spinner from 'react-spinkit'
 
-class LoadingScreen extends React.Component {
+import Root from './components/Root'
+import ContainerLogo from './components/ContainerLogo'
+import ChildrenWrapper from './components/ChildrenWrapper'
+import Logo from './components/Logo'
+import Text from './components/Text'
 
-  render() {
+const propTypes = {
+  children:        PropTypes.node.isRequired,
+  backgroundColor: PropTypes.string,
+  spinnerColor:    PropTypes.string,
+  loading:         PropTypes.bool.isRequired,
+  logoSrc:         PropTypes.string,
+  text:            PropTypes.string,
+  textStyle:       PropTypes.object,
+}
 
-    const {
-      children,
-      loading,
-    } = this.props
+function LoadingScreen ({
+  children,
+  backgroundColor,
+  spinnerColor,
+  loading,
+  logoSrc,
+  text,
+  textStyle
+}) {
 
-    return (
-        <div>
-          <div className="loading-screen-root">
-            <img src='/images/logo-big.png' className="loading-screen-logo"/>
-          </div>
-
-          <div style={{ display: "none" }}>{children}</div>
-        </div>
-    )
+  const windowSizeBlock = {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%',
   }
 
+  return (
+    <div style={windowSizeBlock}>
+      <Root 
+        backgroundColor={backgroundColor} 
+        loading={loading}
+      >
+        <ContainerLogo loading={loading}>
+          {logoSrc && 
+            <Logo 
+              src={logoSrc}/>}
+          
+          {loading &&
+            <Spinner name="ball-pulse-sync" color={spinnerColor}/>}
+          
+          {text && 
+            <Text 
+              text={text} 
+              textStyle={textStyle}/>}
+          
+        </ContainerLogo>
+
+      </Root>
+      <ChildrenWrapper loading={loading}>
+        {children}
+      </ChildrenWrapper>    
+    </div>
+  )
 }
 
-LoadingScreen.propTypes = {
-  children: PropTypes.node.isRequired,
-  loading: PropTypes.bool.isRequired
-}
+LoadingScreen.propTypes = propTypes
 
 export default LoadingScreen;
