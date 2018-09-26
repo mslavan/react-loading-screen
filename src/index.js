@@ -1,87 +1,115 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Spinner from 'react-spinkit'
-import styled from 'styled-components'
+'use strict';
 
-import Logo from './components/Logo'
-import Text from './components/Text'
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-const ScreenWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background: ${props => props.bgColor || '#ffffff'};
-  opacity: ${props => props.loading ? 1 : 0};
-  visibility: ${props => props.loading ? 'visible' : 'hidden'};
-  transition: opacity 0.4s, visibility -0.3s linear 0.5s;
-`
-const LoadingComponents = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`
-const LoadableData = styled.div`
-  display: ${props => props.loading ? 'none' : 'block'};
-`
+var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 10000000001;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n'], ['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 10000000001;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n']),
+  _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n']),
+  _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n'], ['\n  display: ', ';\n']);
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-  bgColor: PropTypes.string,
-  spinnerColor: PropTypes.string,
-  textColor: PropTypes.string,
-  loading: PropTypes.bool.isRequired,
-  logoSrc: PropTypes.string,
-  text: PropTypes.string
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactSpinkit = require('react-spinkit');
+
+var _reactSpinkit2 = _interopRequireDefault(_reactSpinkit);
+
+var _styledComponents = require('styled-components');
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _Logo = require('./components/Logo');
+
+var _Logo2 = _interopRequireDefault(_Logo);
+
+var _Text = require('./components/Text');
+
+var _Text2 = _interopRequireDefault(_Text);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ScreenWrapper = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.bgColor || '#ffffff';
+}, function (props) {
+  return props.loading ? 1 : 0;
+}, function (props) {
+  return props.loading ? 'visible' : 'hidden';
+});
+var LoadingComponents = _styledComponents2.default.div(_templateObject2);
+var LoadableData = _styledComponents2.default.div(_templateObject3, function (props) {
+  return props.loading ? 'none' : 'block';
+});
+
+var propTypes = {
+  children: _propTypes2.default.node.isRequired,
+  bgColor: _propTypes2.default.string,
+  spinnerColor: _propTypes2.default.string,
+  textColor: _propTypes2.default.string,
+  loading: _propTypes2.default.bool.isRequired,
+  logoSrc: _propTypes2.default.string,
+  topText: _propTypes2.default.string,
+  bottomText: _propTypes2.default.string
+};
+
+function LoadingScreen(_ref) {
+  var children = _ref.children,
+    bgColor = _ref.bgColor,
+    spinnerColor = _ref.spinnerColor,
+    textColor = _ref.textColor,
+    loading = _ref.loading,
+    logoSrc = _ref.logoSrc,
+    logoRounded = _ref.logoRounded,
+    topText = _ref.topText,
+    bottomText = _ref.bottomText,
+    textStyle = _ref.textStyle;
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      ScreenWrapper,
+      {
+        bgColor: bgColor,
+        loading: loading
+      },
+      _react2.default.createElement(
+        LoadingComponents,
+        null,
+        topText && _react2.default.createElement(_Text2.default, {
+          text: topText,
+          textColor: textColor
+        }),
+        logoSrc && _react2.default.createElement(_Logo2.default, {
+          src: logoSrc,
+          rounded: logoRounded
+        }),
+        loading && spinnerColor && _react2.default.createElement(_reactSpinkit2.default, {
+          name: 'ball-beat',
+          fadeIn: 'quarter',
+          color: spinnerColor
+        }),
+        bottomText && _react2.default.createElement(_Text2.default, {
+          text: bottomText,
+          textColor: textColor
+        })
+      )
+    ),
+    _react2.default.createElement(
+      LoadableData,
+      { loading: loading },
+      children
+    )
+  );
 }
 
-function LoadingScreen ({
-  children,
-  bgColor,
-  spinnerColor,
-  textColor,
-  loading,
-  logoSrc,
-  logoRounded,
-  text,
-  textStyle
-}) {
-  return (
-    <div>
-      <ScreenWrapper
-        bgColor={bgColor}
-        loading={loading}
-      >
-        <LoadingComponents>
-          {logoSrc &&
-            <Logo
-              src={logoSrc}
-              rounded={logoRounded} />}
+LoadingScreen.propTypes = propTypes;
 
-          {loading && spinnerColor &&
-            <Spinner
-              name='ball-beat'
-              fadeIn='quarter'
-              color={spinnerColor} />}
-
-          {text &&
-            <Text
-              text={text}
-              textColor={textColor} />}
-
-        </LoadingComponents>
-      </ScreenWrapper>
-
-      <LoadableData loading={loading}>
-        {children}
-      </LoadableData>
-    </div>
-  )
-}
-
-LoadingScreen.propTypes = propTypes
-
-export default LoadingScreen
+exports.default = LoadingScreen;
