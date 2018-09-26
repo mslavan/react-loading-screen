@@ -28,8 +28,9 @@ class Demo extends React.Component {
         bgColor='#f1f1f1'
         spinnerColor='#9ee5f8'
         textColor='#676767'
+        topText = 'Here is some title text (Optional)'
         logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png'
-        text='Here an introduction sentence (Optional)'
+        bottomText='Here an introduction sentence (Optional)'
       >
         <div style={{ textAlign: 'center' }}>
           <h1>react-screen-loading</h1>

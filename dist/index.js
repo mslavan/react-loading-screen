@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n'], ['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n'], ['\n  display: ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 10000000001;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n'], ['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 10000000001;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n']),
+  _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n']),
+  _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n'], ['\n  display: ', ';\n']);
 
 var _react = require('react');
 
@@ -55,19 +55,21 @@ var propTypes = {
   textColor: _propTypes2.default.string,
   loading: _propTypes2.default.bool.isRequired,
   logoSrc: _propTypes2.default.string,
-  text: _propTypes2.default.string
+  topText: _propTypes2.default.string,
+  bottomText: _propTypes2.default.string
 };
 
 function LoadingScreen(_ref) {
   var children = _ref.children,
-      bgColor = _ref.bgColor,
-      spinnerColor = _ref.spinnerColor,
-      textColor = _ref.textColor,
-      loading = _ref.loading,
-      logoSrc = _ref.logoSrc,
-      logoRounded = _ref.logoRounded,
-      text = _ref.text,
-      textStyle = _ref.textStyle;
+    bgColor = _ref.bgColor,
+    spinnerColor = _ref.spinnerColor,
+    textColor = _ref.textColor,
+    loading = _ref.loading,
+    logoSrc = _ref.logoSrc,
+    logoRounded = _ref.logoRounded,
+    topText = _ref.topText,
+    bottomText = _ref.bottomText,
+    textStyle = _ref.textStyle;
 
   return _react2.default.createElement(
     'div',
@@ -81,16 +83,23 @@ function LoadingScreen(_ref) {
       _react2.default.createElement(
         LoadingComponents,
         null,
+        topText && _react2.default.createElement(_Text2.default, {
+          text: topText,
+          textColor: textColor
+        }),
         logoSrc && _react2.default.createElement(_Logo2.default, {
           src: logoSrc,
-          rounded: logoRounded }),
+          rounded: logoRounded
+        }),
         loading && spinnerColor && _react2.default.createElement(_reactSpinkit2.default, {
           name: 'ball-beat',
           fadeIn: 'quarter',
-          color: spinnerColor }),
-        text && _react2.default.createElement(_Text2.default, {
-          text: text,
-          textColor: textColor })
+          color: spinnerColor
+        }),
+        bottomText && _react2.default.createElement(_Text2.default, {
+          text: bottomText,
+          textColor: textColor
+        })
       )
     ),
     _react2.default.createElement(
