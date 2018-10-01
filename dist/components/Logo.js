@@ -48,6 +48,6 @@ function Logo(_ref) {
     src: src });
 }
 
-Logo.PropTypes = propTypes;
+Logo.propTypes = propTypes;
 
 exports.default = Logo;
