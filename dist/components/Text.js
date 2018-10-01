@@ -51,6 +51,6 @@ function Text(_ref) {
   );
 }
 
-Text.PropTypes = propTypes;
+Text.propTypes = propTypes;
 
 exports.default = Text;
