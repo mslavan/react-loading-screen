@@ -41,6 +41,6 @@ function Text ({
   )
 }
 
-Text.PropTypes = propTypes
+Text.propTypes = propTypes
 
 export default Text

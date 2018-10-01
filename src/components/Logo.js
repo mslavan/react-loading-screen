@@ -45,6 +45,6 @@ function Logo ({
   )
 }
 
-Logo.PropTypes = propTypes
+Logo.propTypes = propTypes
 
 export default Logo
