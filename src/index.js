@@ -82,6 +82,6 @@ function LoadingScreen ({
   )
 }
 
-LoadingScreen.propTypes = propTypes
+LoadingScreen.PropTypes = propTypes
 
 export default LoadingScreen
