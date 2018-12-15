@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n'], ['\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  background: ', ';\n  opacity: ', ';\n  visibility: ', ';\n  transition: opacity 0.4s, visibility -0.3s linear 0.5s;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  transform: translate(-50%, -50%);\n'], ['\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  transform: translate(-50%, -50%);\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: ', ';\n'], ['\n  display: ', ';\n']);
 
 var _react = require('react');
@@ -16,13 +16,11 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactSpinkit = require('react-spinkit');
-
-var _reactSpinkit2 = _interopRequireDefault(_reactSpinkit);
-
 var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _betterReactSpinkit = require('better-react-spinkit');
 
 var _Logo = require('./components/Logo');
 
@@ -84,10 +82,7 @@ function LoadingScreen(_ref) {
         logoSrc && _react2.default.createElement(_Logo2.default, {
           src: logoSrc,
           rounded: logoRounded }),
-        loading && spinnerColor && _react2.default.createElement(_reactSpinkit2.default, {
-          name: 'ball-beat',
-          fadeIn: 'quarter',
-          color: spinnerColor }),
+        loading && spinnerColor && _react2.default.createElement(_betterReactSpinkit.ThreeBounce, { size: 15, color: spinnerColor }),
         text && _react2.default.createElement(_Text2.default, {
           text: text,
           textColor: textColor })

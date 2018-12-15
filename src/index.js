@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Spinner from 'react-spinkit'
 import styled from 'styled-components'
+import { ThreeBounce } from 'better-react-spinkit'
 
 import Logo from './components/Logo'
 import Text from './components/Text'
@@ -22,6 +22,9 @@ const LoadingComponents = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transform: translate(-50%, -50%);
 `
 const LoadableData = styled.div`
@@ -62,10 +65,7 @@ function LoadingScreen ({
               rounded={logoRounded} />}
 
           {loading && spinnerColor &&
-            <Spinner
-              name='ball-beat'
-              fadeIn='quarter'
-              color={spinnerColor} />}
+            <ThreeBounce size={15} color={spinnerColor} />}
 
           {text &&
             <Text
