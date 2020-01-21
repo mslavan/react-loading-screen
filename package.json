@@ -24,7 +24,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.6.2",
-    "react-spinkit": "^3.0.0",
+    "better-react-spinkit": "^2.0.4",
     "styled-components": "^3.2.6",
     "webpack": "^2.6.1"
   },
