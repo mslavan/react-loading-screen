@@ -78,4 +78,4 @@ some of props are **REQUIRED**, if not mentioned prop is OPTIONAL.
 
 **logoSrc** { string }: url of image. If empty param  - not showing. 
 
-**text** { string }: background color of loading sreen. If empty param  - not showing. 
+**text** { string }: the text that appears in the loading screen. If empty param  - not showing. 
