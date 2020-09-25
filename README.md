@@ -31,7 +31,7 @@ Library uses [styled components](https://www.npmjs.com/package/styled-components
 
 For details about why the examples work, read the API documentation below.
 
-You can also see full code of demo by looking in `example/`.
+You can also see full code of demo by looking in `demo/`.
 
 ```js
 import React from 'react'
